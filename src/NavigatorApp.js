@@ -2,12 +2,15 @@ import {
 	createStackNavigator,
 	createDrawerNavigator,
 	createAppContainer 
-} from 'native-navigation';
+} from 'react-navigation';
 
 import HomeScreen from './Home';
 import FeedScreen from './Feed';
 import SettingsScreen from './Settings';
 import WhatScreen from './What';
+
+import { View, Text } from 'react-native';
+import React from 'react';
 
 
 const HomeStack = createStackNavigator({
