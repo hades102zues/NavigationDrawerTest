@@ -4,6 +4,7 @@ import {
 	createAppContainer 
 } from 'react-navigation';
 
+import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './Home';
 import FeedScreen from './Feed';
 import SettingsScreen from './Settings';
@@ -35,8 +36,19 @@ const SettingsStack = createStackNavigator({
 });
 
 const SideDrawer = createDrawerNavigator({
-	Home: HomeStack,
-	Settings : SettingsStack,
+	Home: {
+		screen: HomeStack,
+		navigationOptions : {
+			drawerIcon : (props)=> ( <Icon name="ios-home" size={24} /> )
+		},
+		
+	},
+	Settings : {
+		screen : SettingsStack,
+		navigationOptions : {
+			drawerIcon : (props)=> ( <Icon name="ios-home" size={24} /> )
+		},
+	},
 });
 
 
